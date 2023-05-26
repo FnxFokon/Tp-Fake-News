@@ -1,0 +1,701 @@
+/*
+Fond clair: #FFFFFF
+Fond gris: #F0F0F0
+Fond sombre: #444444
+Orange: #ED786A
+Orange:hover: #FD887A
+Rouge: #CC0000
+Gris léger: #E5E5E5
+Blanc: #FFFFFF
+Gris clair: #888888
+Gris moyen: #777777
+Gris: #666666
+Gris sombre: #3C3C3C
+
+Polices: 
+“Arvo” 700 (Google Fonts)
+“Source Sans Pro” 300, 400, 600 (Google Fonts)
+“FontAwesome” (CSS et polices fournies dans les ressources)
+
+/// TODO:   - Prendre les mesures de la maquettes pour avoir les bonnes valeur de marge,padding,taille de police etc...
+            - Format 991px et plus
+            - JS (form)
+*/
+
+/* ---------------------------------  Styles généraux du design ---------------------------------  */
+body {
+    background-color: #FFFFFF;
+    color: #777777;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 28px;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+
+img {
+    border: 10px solid #F0F0F0;
+    margin: auto;
+    object-fit: cover;
+    width: 100%;
+}
+
+
+/* ---------------------------------  Styles façon framework ---------------------------------  */
+.hidden {
+    display: none !important;
+}
+
+hr {
+    border-top: 3px solid #E5E5E5;
+    margin: auto;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    width: 100%;
+}
+
+.under-line {
+    text-decoration: underline #E5E5E5;
+}
+
+.under-line:hover {
+    color: #FD887A;
+    text-decoration: none;
+}
+
+.container {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 60px;
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+h1 {
+    color: #ED786A;
+    font-family: 'Arvo', cursive;
+    font-size: 48px;
+    letter-spacing: 16px;
+    padding: 20px 0;
+}
+
+h2 {
+    font-size: 42px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+h3,
+.h3 {
+    font-size: 38px;
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+
+h4,
+.h4 {
+    font-size: 26px;
+    letter-spacing: 3px;
+}
+
+.box-shadow {
+    box-shadow: 2px 2px #E5E5E5;
+}
+
+
+/* --- Bouton --- */
+.plus {
+    background-color: #ED786A;
+    border-radius: 4px;
+    color: #FFFFFF;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.plus:hover {
+    background-color: #FD887A;
+}
+
+
+.plus i::before {
+    color: #E5E5E5;
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.plus button,
+.plus input {
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+/* ---------------------------------  Header --------------------------------- */
+
+/* --- Nav --- */
+#cmd-menu {
+    background-color: #F0F0F0;
+    border-radius: 4px;
+    box-shadow: 1px 1px 0 #E5E5E5;
+    font-size: 18px;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 200px;
+    padding: 6px 12px 5px;
+    position: relative;
+}
+.menu-pop{
+    left: 0 !important;
+}
+.cmd-menu{
+    left: 300px !important;
+}
+
+#main-menu{
+    background-color: #444444;
+    width: 300px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color:#E5E5E5;
+    position: absolute;
+    top: 0;
+    left: -300px;
+    padding-bottom: 160px;
+    
+}
+    #main-menu > li {
+        border-top: 1px solid #3C3C3C;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+        #main-menu > li > a{
+            padding: 0 10px;
+        }
+
+#sous-menu-truc-toc{
+    font-weight: normal;
+    padding-top: 10px;
+}
+    #sous-menu-truc-toc > li {
+        border-top: 1px solid #3C3C3C;
+        padding-bottom: 10px;
+        padding-top: 10px;  
+    }
+        #sous-menu-truc-toc > li > a{
+            padding: 10px 20px;  
+        }
+        #sous-menu-truc-toc > #li-non{
+            padding-bottom: 0px;
+        }
+
+#sous-menu-falsifications{
+    font-weight: normal;
+    padding-top: 10px;
+}
+    #sous-menu-falsifications > li {
+        border-top: 1px solid #3C3C3C;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+        #sous-menu-falsifications > li > a{
+            padding: 30px 30px;
+        }
+
+/* --- Titre --- */
+.title-div {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+
+/* ---------------------------------  Main ---------------------------------  */
+/* --- Les Dernieres Fake News --- */
+
+.liste-news {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.liste-news h3 {
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.liste-news p {
+    padding: 10px;
+    text-align: center;
+
+}
+
+.box-last-news {
+    margin-bottom: 40px;
+
+}
+
+.box-last-news img {
+    margin-bottom: 20px;
+
+}
+
+
+/* --- Banniere & Dicton --- */
+.baniere div {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.baniere hr {
+    margin-top: 10px;
+}
+
+.img-baniere {
+    border: none;
+    height: 350px;
+}
+
+.txt-baniere {
+    color: #FFFFFF;
+    font-size: 28px;
+    letter-spacing: 4px;
+    padding: 40px;
+    position: absolute;
+    text-align: center;
+
+}
+/* articles */
+
+.articles img {
+    float: left;
+    margin: 10px 50px 25px 0;
+    width: 180px;
+}
+
+/* --- Under-banner --- */
+.actu-time {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.passport-hamster img{
+    width: 100%;
+}
+
+.box-grey {
+    background-color: #888888;
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+
+
+
+/* ---------------------------------  Footer ---------------------------------  */
+
+footer {
+    background-color: #F0F0F0;
+    border-top: 2px solid #E5E5E5;
+    margin-top: 40px;
+}
+
+/* --- FORM --- */
+.form h2,
+h3 {
+    padding: 10px;
+}
+
+.form h2 {
+    margin-top: 60px;
+}
+
+.form h3 {
+    font-weight: bold;
+}
+
+.form-txt-area {
+    background-color: #FFFFFF;
+    border-left: 2px solid #E5E5E5;
+    border-top: 2px solid #E5E5E5;
+    margin: 10px;
+    padding: 5px 0 10px 5px;
+    text-align: start;
+    width: 100%;
+}
+
+
+/* --- Réseaux --- */
+.contact {
+    margin-bottom: 100px;
+}
+
+.reso {
+    align-items: baseline;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+.reso i {
+    background-color: #777777;
+    border-radius: 50%;
+    color: #E5E5E5;
+    letter-spacing: 0px;
+    padding: 9px;
+    margin-right: 20px;
+}
+
+/* --- Droit et Mentions --- */
+.bot-footer {
+    margin: auto;
+    margin-top: 60px;
+    padding-bottom: 40px;
+    text-align: center;
+    width: 60%;
+}
+
+/* --------------------------------- Format Tablette ---------------------------------  */
+@media (min-width: 768px) {
+
+    /* ---------------------------------  Styles généraux du design Tablette ---------------------------------  */
+    body {
+        font-size: 16px;
+    }
+
+    h3,
+    .h3 {
+
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+    h4,.h4{
+        font-size: 20px;
+        letter-spacing: 3px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    /* ---------------------------------  Styles façon framework ---------------------------------  */
+    /* bouton */
+    .plus {
+        padding: 15px 0;
+        width: 60%;
+    }
+
+    .plus i {
+        color: #E5E5E5;
+        font-size: 16px;
+        margin-right: 15px;
+    }
+
+    .plus button, .plus input{
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    .liste-news ~ .plus{
+        width: 35%;
+    }
+
+    .partenaire ~ .plus{
+        padding-left: 10px;
+        padding-right: 10px;
+        width: max-content;
+    }
+
+    /* ---------------------------------  Main ---------------------------------  */
+    /* --- Last Fake News--- */
+    .liste-news {
+        align-items: normal;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    .box-last-news {
+        width: 30%;
+    }
+
+    /* --- Under-banner --- */
+
+    .under-banner {
+        display: flex;
+        gap: 40px;
+    }
+
+    .under-banner h4{
+        text-align: start;
+    }
+
+    .articles .plus {
+        margin: initial;
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    .articles{
+        padding-top: 40px;
+    }
+
+    .articles article{
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* --- Articles 1 --- */
+    .passport-hamster {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .passport-hamster img {
+        width: 100%;
+    }
+
+    /* --- Articles 2 --- */
+    .actu-time {
+        align-items: baseline;
+        margin: 20px 0;
+    }
+
+    /* ---------------------------------  Footer ---------------------------------  */
+    /* ---- FOOTER ---- */
+    footer{
+        padding-left: 40px;
+        padding-right: 40px;
+        width: 100%;
+    }
+
+    .title-footer{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .title-footer h2{
+        font-size: 25px;
+    }
+
+    .title-footer h3{
+        font-weight: bold;
+    }
+
+    .bloc-footer{
+        display: flex;
+        gap: 40px;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+    }
+
+    /* --- Form --- */
+    .nom-mail{
+        display: flex;
+        gap: 20px;
+    }
+    form .plus{
+        margin: inherit;
+        margin-left: 10px;
+        width: 90%;
+    }
+    .form-txt-area{
+        margin: 0 0 10px 10px;
+    }
+
+    /* --- Réseaux --- */
+    .resox{
+        display: flex;
+    }
+
+    address{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .reso {
+        margin: 0;
+    }
+
+    li.reso {
+        padding-bottom: 20px;
+    }
+
+    .contact div p{
+        padding-bottom: 30px;
+    }
+
+    /* --- Droit et mentions --- */
+    .bot-footer{
+        align-content: center;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+@media (min-width: 992px) and (hover: hover) {
+    /* TODO: */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+    /* TODO:;*/
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    /*  TODO:;*/
+}
+
+@media (min-width: 992px) and (hover: hover) {
+    /* TODO:; */
+}
